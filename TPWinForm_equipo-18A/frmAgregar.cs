@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TPWinForm_equipo_18A
 {
-    public partial class Form1 : Form
+    public partial class frmAgregar : Form
     {
-        public Form1()
+        public frmAgregar()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            return;
         }
     }
 }
