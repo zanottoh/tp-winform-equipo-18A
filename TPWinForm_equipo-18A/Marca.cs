@@ -8,5 +8,8 @@ namespace TPWinForm_equipo_18A
 {
     internal class Marca
     {
+        public int IdMarca { get; set; }
+
+        public int NombreMarca { get; set; }
     }
 }
