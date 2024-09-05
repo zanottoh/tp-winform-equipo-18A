@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_equipo_18A
 {
-    internal class Categoria
+    internal class Imagen
     {
-        public int id { get; set; }
-        public string descripcion  { get; set; }
+
 
     }
 }

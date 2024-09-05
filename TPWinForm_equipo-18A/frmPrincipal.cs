@@ -16,5 +16,26 @@ namespace TPWinForm_equipo_18A
         {
             InitializeComponent();
         }
+
+        private void botonBusqueda_Click(object sender, EventArgs e)
+        {
+            frmBuscar ventana = new frmBuscar();
+            ventana.ShowDialog();
+        }
+
+        private void listarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonAgregar_Click(object sender, EventArgs e)
+        {
+
+            frmAgregar ventana = new frmAgregar();
+            ventana.ShowDialog(this);
+
+        }
+
+       
     }
 }
