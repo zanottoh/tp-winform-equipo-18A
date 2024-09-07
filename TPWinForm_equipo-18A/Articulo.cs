@@ -12,6 +12,6 @@ namespace TPWinForm_equipo_18A
         public string Descripcion { get; set; }
         public Marca Marca{ get; set; }
         public Categoria Categoria { get; set; }
-        public float Precio{ get; set; }
+        public decimal Precio{ get; set; }
     }
 }

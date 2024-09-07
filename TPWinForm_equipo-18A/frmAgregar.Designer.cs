@@ -32,9 +32,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
-            this.cbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.tbPrecio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,15 +80,15 @@
             this.lblMarca.TabIndex = 3;
             this.lblMarca.Text = "Marca: ";
             // 
-            // cbMarca
+            // cmbMarca
             // 
-            this.cbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(107, 93);
-            this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(269, 21);
-            this.cbMarca.TabIndex = 4;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(107, 93);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(269, 21);
+            this.cmbMarca.TabIndex = 4;
             // 
             // lblCategoria
             // 
@@ -99,15 +99,15 @@
             this.lblCategoria.TabIndex = 5;
             this.lblCategoria.Text = "Categoria: ";
             // 
-            // cbCategoria
+            // cmbCategoria
             // 
-            this.cbCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(107, 120);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(269, 21);
-            this.cbCategoria.TabIndex = 6;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(107, 120);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(269, 21);
+            this.cmbCategoria.TabIndex = 6;
             // 
             // lblPrecio
             // 
@@ -156,6 +156,7 @@
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCancelar
             // 
@@ -179,9 +180,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbPrecio);
             this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.cbCategoria);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.cbMarca);
+            this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.lblNombre);
@@ -202,9 +203,9 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.ComboBox cbMarca;
+        private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox tbPrecio;
         private System.Windows.Forms.Label label1;
