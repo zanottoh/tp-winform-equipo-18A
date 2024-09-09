@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPWinForm_equipo_18A
+namespace dominio
 {
-    internal class Imagen
+    public class Imagen
     {
-
+        public int IdArticulo { get; set; }
+        public string UrlImagen { get; set; }
 
     }
 }

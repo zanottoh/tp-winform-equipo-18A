@@ -46,15 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Articulo.cs" />
-    <Compile Include="Categoria.cs" />
     <Compile Include="frmBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBuscar.Designer.cs">
       <DependentUpon>frmBuscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Imagen.cs" />
     <Compile Include="frmDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,7 +70,6 @@
     <Compile Include="frmAgregar.Designer.cs">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregar.resx">
@@ -109,6 +105,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\dominio.csproj">
+      <Project>{4ac7c779-9616-40a1-83ef-14c09e3c8f2a}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{2cd4abf5-4c1b-4609-934a-92bf26bab910}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

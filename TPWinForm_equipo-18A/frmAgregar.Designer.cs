@@ -41,6 +41,8 @@
             this.tbDescripcion = new System.Windows.Forms.RichTextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.tbCodigo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -55,8 +57,9 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(51, 70);
+            this.lblNombre.Location = new System.Drawing.Point(51, 102);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(50, 13);
             this.lblNombre.TabIndex = 1;
@@ -64,17 +67,17 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNombre.Location = new System.Drawing.Point(107, 67);
+            this.tbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNombre.Location = new System.Drawing.Point(107, 99);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(269, 20);
             this.tbNombre.TabIndex = 2;
             // 
             // lblMarca
             // 
+            this.lblMarca.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(58, 96);
+            this.lblMarca.Location = new System.Drawing.Point(58, 128);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(43, 13);
             this.lblMarca.TabIndex = 3;
@@ -82,18 +85,19 @@
             // 
             // cmbMarca
             // 
-            this.cmbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(107, 93);
+            this.cmbMarca.Location = new System.Drawing.Point(107, 125);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(269, 21);
             this.cmbMarca.TabIndex = 4;
             // 
             // lblCategoria
             // 
+            this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(43, 123);
+            this.lblCategoria.Location = new System.Drawing.Point(43, 155);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(58, 13);
             this.lblCategoria.TabIndex = 5;
@@ -101,18 +105,19 @@
             // 
             // cmbCategoria
             // 
-            this.cmbCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(107, 120);
+            this.cmbCategoria.Location = new System.Drawing.Point(107, 152);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(269, 21);
             this.cmbCategoria.TabIndex = 6;
             // 
             // lblPrecio
             // 
+            this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(58, 150);
+            this.lblPrecio.Location = new System.Drawing.Point(58, 182);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(49, 13);
             this.lblPrecio.TabIndex = 7;
@@ -120,17 +125,17 @@
             // 
             // tbPrecio
             // 
-            this.tbPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbPrecio.Location = new System.Drawing.Point(107, 147);
+            this.tbPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbPrecio.Location = new System.Drawing.Point(107, 179);
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(158, 20);
             this.tbPrecio.TabIndex = 8;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 177);
+            this.label1.Location = new System.Drawing.Point(32, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 9;
@@ -138,19 +143,18 @@
             // 
             // tbDescripcion
             // 
-            this.tbDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDescripcion.Location = new System.Drawing.Point(35, 203);
+            this.tbDescripcion.Location = new System.Drawing.Point(35, 266);
             this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(341, 89);
+            this.tbDescripcion.Size = new System.Drawing.Size(341, 78);
             this.tbDescripcion.TabIndex = 10;
             this.tbDescripcion.Text = "";
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregar.Location = new System.Drawing.Point(40, 309);
+            this.btnAgregar.Location = new System.Drawing.Point(40, 361);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 11;
@@ -161,7 +165,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(296, 309);
+            this.btnCancelar.Location = new System.Drawing.Point(296, 361);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 12;
@@ -169,11 +173,31 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblCodigo
+            // 
+            this.lblCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(55, 75);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.TabIndex = 13;
+            this.lblCodigo.Text = "Codigo:";
+            // 
+            // tbCodigo
+            // 
+            this.tbCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCodigo.Location = new System.Drawing.Point(107, 72);
+            this.tbCodigo.Name = "tbCodigo";
+            this.tbCodigo.Size = new System.Drawing.Size(269, 20);
+            this.tbCodigo.TabIndex = 14;
+            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 368);
+            this.ClientSize = new System.Drawing.Size(423, 420);
+            this.Controls.Add(this.tbCodigo);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.tbDescripcion);
@@ -192,6 +216,7 @@
             this.Name = "frmAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregar";
+            this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +237,7 @@
         private System.Windows.Forms.RichTextBox tbDescripcion;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.TextBox tbCodigo;
     }
 }
