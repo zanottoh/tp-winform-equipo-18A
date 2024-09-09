@@ -71,7 +71,7 @@
             this.tbNombre.Location = new System.Drawing.Point(107, 99);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(269, 20);
-            this.tbNombre.TabIndex = 2;
+            this.tbNombre.TabIndex = 1;
             // 
             // lblMarca
             // 
@@ -91,7 +91,7 @@
             this.cmbMarca.Location = new System.Drawing.Point(107, 125);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(269, 21);
-            this.cmbMarca.TabIndex = 4;
+            this.cmbMarca.TabIndex = 2;
             // 
             // lblCategoria
             // 
@@ -111,7 +111,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(107, 152);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(269, 21);
-            this.cmbCategoria.TabIndex = 6;
+            this.cmbCategoria.TabIndex = 3;
             // 
             // lblPrecio
             // 
@@ -129,7 +129,7 @@
             this.tbPrecio.Location = new System.Drawing.Point(107, 179);
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(158, 20);
-            this.tbPrecio.TabIndex = 8;
+            this.tbPrecio.TabIndex = 4;
             // 
             // label1
             // 
@@ -148,7 +148,7 @@
             this.tbDescripcion.Location = new System.Drawing.Point(35, 266);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(341, 78);
-            this.tbDescripcion.TabIndex = 10;
+            this.tbDescripcion.TabIndex = 5;
             this.tbDescripcion.Text = "";
             // 
             // btnAgregar
@@ -157,7 +157,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(40, 361);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 11;
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -168,7 +168,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(296, 361);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -189,7 +189,7 @@
             this.tbCodigo.Location = new System.Drawing.Point(107, 72);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(269, 20);
-            this.tbCodigo.TabIndex = 14;
+            this.tbCodigo.TabIndex = 0;
             // 
             // frmAgregar
             // 
@@ -212,7 +212,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MinimumSize = new System.Drawing.Size(355, 375);
+            this.MinimumSize = new System.Drawing.Size(439, 459);
             this.Name = "frmAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregar";
