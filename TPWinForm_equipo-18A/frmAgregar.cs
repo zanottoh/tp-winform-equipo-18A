@@ -45,6 +45,8 @@ namespace TPWinForm_equipo_18A
                 // escritura del articulo en la db
 
                 negocio.agregar(artNuevo);
+
+
                 MessageBox.Show("Articulo agregado exitosamente");
                 Close();
             }
@@ -72,5 +74,21 @@ namespace TPWinForm_equipo_18A
             }
         }
 
+        private void tbImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(tbImagen.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxArticulo.Load("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            }
+        }
     }
 }
