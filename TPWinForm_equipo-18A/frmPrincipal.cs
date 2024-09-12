@@ -26,6 +26,18 @@ namespace TPWinForm_equipo_18A
         private void listarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
 
         private void botonAgregar_Click(object sender, EventArgs e)
@@ -36,6 +48,10 @@ namespace TPWinForm_equipo_18A
 
         }
 
-       
+        private void botonListar_Click(object sender, EventArgs e)
+        {
+            frmList ventana = new frmList();
+            ventana.ShowDialog(this);
+        }
     }
 }

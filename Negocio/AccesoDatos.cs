@@ -11,7 +11,7 @@ namespace Negocio
     {
         private SqlConnection conexion;
         private SqlCommand comando;
-        private SqlDataReader lector;
+        public SqlDataReader lector;
 
         public SqlDataReader Lector
         {
@@ -24,12 +24,19 @@ namespace Negocio
         {
             conexion = new SqlConnection("server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security = true");
             comando = new SqlCommand();
+
+
         }
 
         public void setearConsulta(string consulta)
         {
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
+        }
+
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
         }
 
         public void ejecutarLectura()

@@ -1,36 +1,120 @@
 ﻿using dominio;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Negocio
 {
     public class ArticuloNegocio
-    {
-        public List<Articulo> listar()
-        {
+	{
+		public List<Articulo> listar()
+		{
 			List<Articulo> lista = new List<Articulo>();
 			AccesoDatos datos = new AccesoDatos();
 
 			try
 			{
-				//datos.setearConsulta();
+
+				datos.setearConsulta("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, a.Precio, c.Descripcion AS Categoria, m.Descripcion AS Marca FROM ARTICULOS a JOIN CATEGORIAS c ON a.IdCategoria = c.Id JOIN MARCAS m ON a.IdMarca = m.Id");
 				datos.ejecutarLectura();
 
 
-			
+				while (datos.lector.Read())  // recorremoss los resultados de la consulta
+				{
+					Articulo articulo = new Articulo();
+					articulo.IdArticulo = (int)datos.lector["Id"];
+					articulo.Codigo = (string)datos.lector["Codigo"];
+					articulo.Nombre = (string)datos.lector["Nombre"];
+					articulo.Descripcion = (string)datos.lector["Descripcion"];
+					articulo.Precio = (decimal)datos.lector["Precio"];
+
+					
+					articulo.Marca = new Marca();
+					articulo.Marca.NombreMarca = (string)datos.lector["Marca"];  
+
+					articulo.Categoria = new Categoria();
+					articulo.Categoria.descripcion = (string)datos.lector["Categoria"];  
+
+
+
+
+					lista.Add(articulo);  // añadir articulo a la lista
+				}
+
 				return lista;
+
+
+
 			}
 			catch (Exception ex)
 			{
 
 				throw ex;
 			}
+		}
+
+
+        public List<Articulo> listarPorCategoria(int categoriaId)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                // Consulta SQL para filtrar por categoría
+                string consulta = @"
+        SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion AS Categoria, M.Descripcion AS Marca
+        FROM ARTICULOS A
+        INNER JOIN MARCAS M ON A.IdMarca = M.Id
+        INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id
+        WHERE C.Id = @categoriaId";
+
+                // Establecer la consulta y el parámetro
+                datos.setearConsulta(consulta);
+                datos.setearParametro("@categoriaId", categoriaId);
+
+               
+                datos.ejecutarLectura();
+
+              
+                while (datos.Lector.Read())
+                {
+                    Articulo articulo = new Articulo();
+                    articulo.IdArticulo = (int)datos.Lector["Id"];
+                    articulo.Codigo = (string)datos.Lector["Codigo"];
+                    articulo.Nombre = (string)datos.Lector["Nombre"];
+                    articulo.Descripcion = (string)datos.Lector["Descripcion"];
+                    articulo.Precio = (decimal)datos.Lector["Precio"];
+
+                 
+                    articulo.Marca = new Marca();
+                    articulo.Marca.NombreMarca = (string)datos.Lector["Marca"];  
+
+                    articulo.Categoria = new Categoria();
+                    articulo.Categoria.descripcion = (string)datos.Lector["Categoria"];  
+
+                    lista.Add(articulo);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-		public void agregar(Articulo nuevo)
+
+
+
+
+
+        public void agregar(Articulo nuevo)
 		{
 			AccesoDatos datos = new AccesoDatos();
 

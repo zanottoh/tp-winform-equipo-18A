@@ -60,7 +60,7 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(800, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -73,50 +73,50 @@
             this.buscarToolStripMenuItem,
             this.eliminarArtículoToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.agregarToolStripMenuItem.Text = "Agregar articulo";
             // 
             // modificarArtículoToolStripMenuItem
             // 
             this.modificarArtículoToolStripMenuItem.Name = "modificarArtículoToolStripMenuItem";
-            this.modificarArtículoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.modificarArtículoToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.modificarArtículoToolStripMenuItem.Text = "Editar artículo";
             // 
             // listarArticulosToolStripMenuItem
             // 
             this.listarArticulosToolStripMenuItem.Name = "listarArticulosToolStripMenuItem";
-            this.listarArticulosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.listarArticulosToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.listarArticulosToolStripMenuItem.Text = "Listar artículos";
             this.listarArticulosToolStripMenuItem.Click += new System.EventHandler(this.listarArticulosToolStripMenuItem_Click);
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.buscarToolStripMenuItem.Text = "Buscar...";
             // 
             // eliminarArtículoToolStripMenuItem
             // 
             this.eliminarArtículoToolStripMenuItem.Name = "eliminarArtículoToolStripMenuItem";
-            this.eliminarArtículoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.eliminarArtículoToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.eliminarArtículoToolStripMenuItem.Text = "Eliminar artículo";
             // 
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // contextMenuStrip1
@@ -135,7 +135,7 @@
             this.botonBusqueda,
             this.toolStripSeparator1,
             this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 27);
             this.toolStrip1.TabIndex = 3;
@@ -148,7 +148,7 @@
             this.botonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("botonAgregar.Image")));
             this.botonAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.botonAgregar.Name = "botonAgregar";
-            this.botonAgregar.Size = new System.Drawing.Size(24, 24);
+            this.botonAgregar.Size = new System.Drawing.Size(29, 24);
             this.botonAgregar.Text = "Agregar";
             this.botonAgregar.Click += new System.EventHandler(this.botonAgregar_Click);
             // 
@@ -158,7 +158,7 @@
             this.botonEditar.Image = ((System.Drawing.Image)(resources.GetObject("botonEditar.Image")));
             this.botonEditar.ImageTransparentColor = System.Drawing.Color.Azure;
             this.botonEditar.Name = "botonEditar";
-            this.botonEditar.Size = new System.Drawing.Size(24, 24);
+            this.botonEditar.Size = new System.Drawing.Size(29, 24);
             this.botonEditar.Text = "Editar";
             // 
             // botonListar
@@ -167,8 +167,9 @@
             this.botonListar.Image = ((System.Drawing.Image)(resources.GetObject("botonListar.Image")));
             this.botonListar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.botonListar.Name = "botonListar";
-            this.botonListar.Size = new System.Drawing.Size(24, 24);
+            this.botonListar.Size = new System.Drawing.Size(29, 24);
             this.botonListar.Text = "Listar Articulos";
+            this.botonListar.Click += new System.EventHandler(this.botonListar_Click);
             // 
             // botonBusqueda
             // 
@@ -176,7 +177,7 @@
             this.botonBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("botonBusqueda.Image")));
             this.botonBusqueda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.botonBusqueda.Name = "botonBusqueda";
-            this.botonBusqueda.Size = new System.Drawing.Size(24, 24);
+            this.botonBusqueda.Size = new System.Drawing.Size(29, 24);
             this.botonBusqueda.Text = "Buscar";
             this.botonBusqueda.Click += new System.EventHandler(this.botonBusqueda_Click);
             // 
@@ -191,7 +192,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "Eliminar articulo";
             // 
             // frmPrincipal
