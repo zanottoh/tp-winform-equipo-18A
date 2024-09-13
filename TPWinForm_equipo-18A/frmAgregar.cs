@@ -28,6 +28,8 @@ namespace TPWinForm_equipo_18A
         {
             Articulo artNuevo = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+            Imagen imgNueva = new Imagen();
 
             try
             {
@@ -39,12 +41,20 @@ namespace TPWinForm_equipo_18A
                 artNuevo.Marca = (Marca)cmbMarca.SelectedItem;
                 artNuevo.Categoria = (Categoria)cmbCategoria.SelectedItem;
 
-                // Agregar imagen
 
 
                 // escritura del articulo en la db
 
                 negocio.agregar(artNuevo);
+
+                // buscar el id del articulo en la base 
+                artNuevo = negocio.buscarArticulo(artNuevo);
+
+                // Agregar imagen a la DB
+                imgNueva.IdArticulo = artNuevo.IdArticulo;
+                imgNueva.UrlImagen = tbImagen.Text;
+
+                imgNegocio.agregar(imgNueva);
 
 
                 MessageBox.Show("Articulo agregado exitosamente");
