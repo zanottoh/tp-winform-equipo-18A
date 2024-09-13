@@ -51,13 +51,7 @@ namespace TPWinForm_equipo_18A
 
 
 
-                
-
-
-
-
-
-
+      
 
 
 

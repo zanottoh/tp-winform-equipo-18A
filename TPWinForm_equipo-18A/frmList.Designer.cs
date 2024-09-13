@@ -41,62 +41,62 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(372, 9);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(279, 7);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(335, 36);
+            this.lblTitulo.Size = new System.Drawing.Size(274, 29);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "Listado de Productos: ";
             // 
             // lblElegirProducto
             // 
             this.lblElegirProducto.AutoSize = true;
-            this.lblElegirProducto.Location = new System.Drawing.Point(26, 75);
-            this.lblElegirProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblElegirProducto.Location = new System.Drawing.Point(20, 61);
             this.lblElegirProducto.Name = "lblElegirProducto";
-            this.lblElegirProducto.Size = new System.Drawing.Size(283, 16);
+            this.lblElegirProducto.Size = new System.Drawing.Size(224, 13);
             this.lblElegirProducto.TabIndex = 13;
             this.lblElegirProducto.Text = "Elija la categoria de producto que quiere listar:";
             // 
             // cbCategoriaList
             // 
             this.cbCategoriaList.FormattingEnabled = true;
-            this.cbCategoriaList.Location = new System.Drawing.Point(326, 72);
-            this.cbCategoriaList.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCategoriaList.Location = new System.Drawing.Point(244, 58);
             this.cbCategoriaList.Name = "cbCategoriaList";
-            this.cbCategoriaList.Size = new System.Drawing.Size(209, 24);
+            this.cbCategoriaList.Size = new System.Drawing.Size(158, 21);
             this.cbCategoriaList.TabIndex = 14;
             this.cbCategoriaList.SelectedIndexChanged += new System.EventHandler(this.cbEleccionArticulo_SelectedIndexChanged);
             // 
             // dgbListar
             // 
             this.dgbListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbListar.Location = new System.Drawing.Point(29, 130);
+            this.dgbListar.Location = new System.Drawing.Point(22, 106);
+            this.dgbListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgbListar.Name = "dgbListar";
+            this.dgbListar.ReadOnly = true;
             this.dgbListar.RowHeadersWidth = 51;
             this.dgbListar.RowTemplate.Height = 24;
-            this.dgbListar.Size = new System.Drawing.Size(964, 319);
+            this.dgbListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgbListar.Size = new System.Drawing.Size(723, 259);
             this.dgbListar.TabIndex = 15;
             // 
             // pBArticulo
             // 
-            this.pBArticulo.Location = new System.Drawing.Point(1009, 130);
+            this.pBArticulo.Location = new System.Drawing.Point(757, 106);
+            this.pBArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pBArticulo.Name = "pBArticulo";
-            this.pBArticulo.Size = new System.Drawing.Size(346, 319);
+            this.pBArticulo.Size = new System.Drawing.Size(260, 259);
             this.pBArticulo.TabIndex = 16;
             this.pBArticulo.TabStop = false;
             // 
             // frmList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1367, 501);
+            this.ClientSize = new System.Drawing.Size(1025, 407);
             this.Controls.Add(this.pBArticulo);
             this.Controls.Add(this.dgbListar);
             this.Controls.Add(this.cbCategoriaList);
             this.Controls.Add(this.lblElegirProducto);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmList";
             this.Text = "frmDetalle";
             this.Load += new System.EventHandler(this.frmList_Load);

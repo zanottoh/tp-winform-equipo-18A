@@ -15,7 +15,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("insert into IMAGENES values("+ 1+ ","+ imgNueva.UrlImagen+")");
+                datos.setearConsulta("insert into IMAGENES values("+ imgNueva.IdArticulo+ ", '"+ imgNueva.UrlImagen + "')");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

@@ -1,5 +1,6 @@
 ﻿using dominio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -84,10 +85,10 @@ namespace Negocio
                 datos.setearConsulta(consulta);
                 datos.setearParametro("@categoriaId", categoriaId);
 
-               
+
                 datos.ejecutarLectura();
 
-              
+
                 while (datos.Lector.Read())
                 {
                     Articulo articulo = new Articulo();
@@ -97,12 +98,12 @@ namespace Negocio
                     articulo.Descripcion = (string)datos.Lector["Descripcion"];
                     articulo.Precio = (decimal)datos.Lector["Precio"];
 
-                 
+
                     articulo.Marca = new Marca();
-                    articulo.Marca.NombreMarca = (string)datos.Lector["Marca"];  
+                    articulo.Marca.NombreMarca = (string)datos.Lector["Marca"];
 
                     articulo.Categoria = new Categoria();
-                    articulo.Categoria.descripcion = (string)datos.Lector["Categoria"];  
+                    articulo.Categoria.descripcion = (string)datos.Lector["Categoria"];
 
                     lista.Add(articulo);
                 }
@@ -114,16 +115,14 @@ namespace Negocio
                 throw ex;
             }
 
-			finally
-			{
+            finally
+            {
                 datos.cerrarConexion();
+
+
 
             }
         }
-
-
-
-
 
 
         public void agregar(Articulo nuevo)
@@ -145,5 +144,57 @@ namespace Negocio
 				datos.cerrarConexion();
 			}
 		}
+
+		public Articulo buscarArticulo(Articulo art)
+		{
+			AccesoDatos datos = new AccesoDatos();
+
+			try
+			{
+                string consulta = @"
+				SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion AS Categoria, M.Descripcion AS Marca
+				FROM ARTICULOS A
+				INNER JOIN MARCAS M ON A.IdMarca = M.Id
+				INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id
+				WHERE A.Codigo = @codigoArticulo";
+
+                datos.setearConsulta(consulta);
+                datos.setearParametro("@codigoArticulo", art.Codigo);
+
+                datos.ejecutarLectura();
+
+                Articulo articulo = new Articulo();
+
+                if (datos.Lector.Read())
+                {
+                    articulo.IdArticulo = (int)datos.Lector["Id"];
+                    articulo.Codigo = (string)datos.Lector["Codigo"];
+                    articulo.Nombre = (string)datos.Lector["Nombre"];
+                    articulo.Descripcion = (string)datos.Lector["Descripcion"];
+                    articulo.Precio = (decimal)datos.Lector["Precio"];
+
+
+                    articulo.Marca = new Marca();
+                    articulo.Marca.NombreMarca = (string)datos.Lector["Marca"];
+
+                    articulo.Categoria = new Categoria();
+                    articulo.Categoria.descripcion = (string)datos.Lector["Categoria"];
+
+                }
+
+				return articulo;
+
+            }
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 }
