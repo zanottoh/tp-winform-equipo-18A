@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,17 +27,8 @@ namespace TPWinForm_equipo_18A
         private void listarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-
-
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            frmList ventana = new frmList();
+            ventana.ShowDialog(this);
 
         }
 
@@ -52,6 +44,23 @@ namespace TPWinForm_equipo_18A
         {
             frmList ventana = new frmList();
             ventana.ShowDialog(this);
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            dgbPrincipal.DataSource = negocio.listar();
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

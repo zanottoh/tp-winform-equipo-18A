@@ -48,7 +48,20 @@ namespace TPWinForm_equipo_18A
 
             try
             {
-                // Cargar las categorías en el ComboBox
+
+
+
+                
+
+
+
+
+
+
+
+
+
+                /// Cargar las categorías en el ComboBox
                 cbCategoriaList.DataSource = categoriaNegocio.listar();
                 cbCategoriaList.DisplayMember = "descripcion"; // El campo que se mostrará
                 cbCategoriaList.ValueMember = "id"; // El campo que se utilizará como valor (id)

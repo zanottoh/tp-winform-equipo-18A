@@ -56,6 +56,12 @@ namespace Negocio
 
 				throw ex;
 			}
+
+			finally
+			{
+
+                datos.cerrarConexion();
+            }
 		}
 
 
@@ -106,6 +112,12 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+
+			finally
+			{
+                datos.cerrarConexion();
+
             }
         }
 
