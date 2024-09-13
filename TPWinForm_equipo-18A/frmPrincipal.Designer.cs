@@ -137,8 +137,11 @@
             this.dgbPrincipal.Location = new System.Drawing.Point(62, 152);
             this.dgbPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.dgbPrincipal.Name = "dgbPrincipal";
+            this.dgbPrincipal.ReadOnly = true;
             this.dgbPrincipal.RowHeadersWidth = 51;
+            this.dgbPrincipal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgbPrincipal.RowTemplate.Height = 24;
+            this.dgbPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgbPrincipal.Size = new System.Drawing.Size(770, 199);
             this.dgbPrincipal.TabIndex = 4;
             this.dgbPrincipal.SelectionChanged += new System.EventHandler(this.dgbPrincipal_SelectionChanged);
@@ -182,7 +185,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.button3_Click);
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 

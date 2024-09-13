@@ -60,10 +60,7 @@ namespace TPWinForm_equipo_18A
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void dgbPrincipal_SelectionChanged(object sender, EventArgs e)
         {
@@ -91,26 +88,25 @@ namespace TPWinForm_equipo_18A
         {
             AccesoDatos datos = new AccesoDatos();
 
-            datos.setearConsulta("SELECT IdArticulo, ImagenUrl from IMAGENES");
+            datos.setearConsulta("SELECT ImagenUrl From IMAGENES where IdArticulo = "+ imagen.IdArticulo +"");
             datos.ejecutarLectura();
 
 
             while (datos.lector.Read())  // recorremos los resultados de la consulta
-            {
-                Imagen imagen1 = new Imagen();
-                imagen1.IdArticulo = (int)datos.lector["IdArticulo"];
-                imagen1.UrlImagen = (string)datos.lector["ImagenUrl"];
-
-                if (imagen.IdArticulo == imagen1.IdArticulo)
-                {
-                    datos.cerrarConexion();
-                    return imagen1;
-                }
-
-
+            {  
+                imagen.UrlImagen = (string)datos.lector["ImagenUrl"];
+                datos.cerrarConexion();
+                return imagen;
             }
+
             datos.cerrarConexion();
             return null;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregar ventanaAgregar = new frmAgregar();
+            ventanaAgregar.ShowDialog();
         }
     }
 }
