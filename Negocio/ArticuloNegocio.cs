@@ -116,9 +116,6 @@ namespace Negocio
 
 
 
-
-
-
         public void agregar(Articulo nuevo)
 		{
 			AccesoDatos datos = new AccesoDatos();
