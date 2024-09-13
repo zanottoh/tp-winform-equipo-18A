@@ -65,7 +65,11 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+<<<<<<< HEAD
             this.menuStrip2.Size = new System.Drawing.Size(1213, 24);
+=======
+            this.menuStrip2.Size = new System.Drawing.Size(938, 24);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -135,10 +139,19 @@
             // 
             this.dgbPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbPrincipal.Location = new System.Drawing.Point(62, 152);
+<<<<<<< HEAD
             this.dgbPrincipal.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.dgbPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.dgbPrincipal.Name = "dgbPrincipal";
+            this.dgbPrincipal.ReadOnly = true;
             this.dgbPrincipal.RowHeadersWidth = 51;
             this.dgbPrincipal.RowTemplate.Height = 24;
+<<<<<<< HEAD
+=======
+            this.dgbPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.dgbPrincipal.Size = new System.Drawing.Size(770, 199);
             this.dgbPrincipal.TabIndex = 4;
             this.dgbPrincipal.SelectionChanged += new System.EventHandler(this.dgbPrincipal_SelectionChanged);
@@ -156,7 +169,11 @@
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(401, 364);
+<<<<<<< HEAD
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 32);
             this.btnModificar.TabIndex = 6;
@@ -166,7 +183,11 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(738, 364);
+<<<<<<< HEAD
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(93, 32);
             this.btnEliminar.TabIndex = 7;
@@ -176,7 +197,11 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(62, 366);
+<<<<<<< HEAD
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(99, 31);
             this.btnAgregar.TabIndex = 8;
@@ -208,7 +233,11 @@
             // 
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(160, 91);
+<<<<<<< HEAD
             this.cbCategoria.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(134, 21);
             this.cbCategoria.TabIndex = 12;
@@ -217,7 +246,11 @@
             // 
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(160, 122);
+<<<<<<< HEAD
             this.cbMarca.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.cbMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(134, 21);
             this.cbMarca.TabIndex = 13;
@@ -225,7 +258,11 @@
             // btnBusquedaAvanzada
             // 
             this.btnBusquedaAvanzada.Location = new System.Drawing.Point(711, 121);
+<<<<<<< HEAD
             this.btnBusquedaAvanzada.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnBusquedaAvanzada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.btnBusquedaAvanzada.Name = "btnBusquedaAvanzada";
             this.btnBusquedaAvanzada.Size = new System.Drawing.Size(120, 20);
             this.btnBusquedaAvanzada.TabIndex = 14;
@@ -245,8 +282,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1213, 479);
             this.Controls.Add(this.pbxImagenSeleccion);
+=======
+            this.ClientSize = new System.Drawing.Size(938, 419);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.Controls.Add(this.btnBusquedaAvanzada);
             this.Controls.Add(this.cbMarca);
             this.Controls.Add(this.cbCategoria);
@@ -258,7 +299,11 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgbPrincipal);
             this.Controls.Add(this.menuStrip2);
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 80220ed3058888240def0147d33f6dc2efba6206
             this.Name = "frmPrincipal";
             this.Text = "Gestor de Articulos";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
