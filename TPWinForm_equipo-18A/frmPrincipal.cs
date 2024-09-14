@@ -49,6 +49,11 @@ namespace TPWinForm_equipo_18A
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            cargar();
+
+        }
+        private void cargar()
+        {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             dgbPrincipal.DataSource = negocio.listar();
@@ -59,8 +64,7 @@ namespace TPWinForm_equipo_18A
             cbCategoria.DataSource = categoriaNegocio.listar();
             cbMarca.DataSource = marcaNegocio.listar();
             cbCategoria.SelectedIndex = -1;
-            cbMarca.SelectedIndex = -1; 
-
+            cbMarca.SelectedIndex = -1;
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,10 +76,10 @@ namespace TPWinForm_equipo_18A
 
         private void dgbPrincipal_SelectionChanged(object sender, EventArgs e)
         {
-            Imagen imagen = new Imagen();
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+
             Articulo seleccionado = (Articulo)dgbPrincipal.CurrentRow.DataBoundItem;
-            imagen.IdArticulo = seleccionado.IdArticulo;
-            Imagen imagenObtenida = ObtenerImagen(imagen);
+            Imagen imagenObtenida = imgNegocio.ObtenerImagen(seleccionado.IdArticulo);
             cargarImagen(imagenObtenida);
         }
 
@@ -92,39 +96,22 @@ namespace TPWinForm_equipo_18A
             }
         }
 
-        private Imagen ObtenerImagen(Imagen imagen)
-        {
-            AccesoDatos datos = new AccesoDatos();
-
-            datos.setearConsulta("SELECT ImagenUrl From IMAGENES where IdArticulo = "+ imagen.IdArticulo +"");
-            datos.ejecutarLectura();
-
-
-            while (datos.lector.Read())  // recorremos los resultados de la consulta
-            {  
-                imagen.UrlImagen = (string)datos.lector["ImagenUrl"];
-                datos.cerrarConexion();
-                return imagen;
-            }
-
-            datos.cerrarConexion();
-            return null;
-        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregar ventanaAgregar = new frmAgregar();
             ventanaAgregar.ShowDialog();
+            cargar();
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-           ArticuloNegocio negocio = new ArticuloNegocio();
+            ArticuloNegocio negocio = new ArticuloNegocio();
 
             List<Articulo> lista = new List<Articulo>();
 
             lista = negocio.listar();
-            
+
             List<Articulo> listaFiltrada;
 
             string categoria = null;
@@ -142,8 +129,10 @@ namespace TPWinForm_equipo_18A
                 marca = marcaSeleccionada.NombreMarca;
             }
 
-
-            listaFiltrada = lista.FindAll(Item => (categoria == null || Item.Categoria.descripcion == categoria && marca == null || Item.Marca.NombreMarca == marca ));
+            listaFiltrada = lista.FindAll(item =>
+            (categoria == null || item.Categoria.descripcion == categoria) &&
+            (marca == null || item.Marca.NombreMarca == marca)
+                                                    );
             dgbPrincipal.DataSource = null;
             dgbPrincipal.DataSource = listaFiltrada;
 
@@ -169,6 +158,16 @@ namespace TPWinForm_equipo_18A
         {
             frmBuscar ventanaBuscar = new frmBuscar();
             ventanaBuscar.ShowDialog();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+            Articulo seleccionado = (Articulo)dgbPrincipal.CurrentRow.DataBoundItem;
+            Imagen imgSeleccion = imgNegocio.ObtenerImagen(seleccionado.IdArticulo);
+            frmAgregar ventanaModificar = new frmAgregar(seleccionado, imgSeleccion);
+            ventanaModificar.ShowDialog();
+            cargar();
         }
     }
 }

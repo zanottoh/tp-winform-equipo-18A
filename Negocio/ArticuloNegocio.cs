@@ -21,7 +21,7 @@ namespace Negocio
 			try
 			{
 
-				datos.setearConsulta("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, a.Precio, c.Descripcion AS Categoria, m.Descripcion AS Marca FROM ARTICULOS a JOIN CATEGORIAS c ON a.IdCategoria = c.Id JOIN MARCAS m ON a.IdMarca = m.Id");
+				datos.setearConsulta("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, a.Precio, a.IdCategoria, a.IdMarca, c.Descripcion AS Categoria, m.Descripcion AS Marca FROM ARTICULOS a JOIN CATEGORIAS c ON a.IdCategoria = c.Id JOIN MARCAS m ON a.IdMarca = m.Id");
 				datos.ejecutarLectura();
 
 
@@ -37,11 +37,11 @@ namespace Negocio
 					
 					articulo.Marca = new Marca();
 					articulo.Marca.NombreMarca = (string)datos.lector["Marca"];  
+                    articulo.Marca.IdMarca = (int)datos.lector["idMarca"];
 
 					articulo.Categoria = new Categoria();
 					articulo.Categoria.descripcion = (string)datos.lector["Categoria"];  
-
-
+                    articulo.Categoria.id = (int)datos.lector["IdCategoria"];
 
 
 					lista.Add(articulo);  // añadir articulo a la lista
@@ -144,6 +144,33 @@ namespace Negocio
 				datos.cerrarConexion();
 			}
 		}
+
+        public void modificar(Articulo modificado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @idArticulo");
+                datos.setearParametro("@codigo", modificado.Codigo);
+                datos.setearParametro("@nombre", modificado.Nombre);
+                datos.setearParametro("@descripcion", modificado.Descripcion);
+                datos.setearParametro("@idMarca", modificado.Marca.IdMarca);
+                datos.setearParametro("@idCategoria", modificado.Categoria.id);
+                datos.setearParametro("@precio", modificado.Precio);
+                datos.setearParametro("@idArticulo", modificado.IdArticulo);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
 		public Articulo buscarArticulo(Articulo art)
 		{

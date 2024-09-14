@@ -78,7 +78,6 @@ namespace TPWinForm_equipo_18A
 
             try
             {
-
                 string categoria = null;
                 string marca = null;
 

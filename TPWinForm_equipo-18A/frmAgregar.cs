@@ -14,9 +14,19 @@ namespace TPWinForm_equipo_18A
 {
     public partial class frmAgregar : Form
     {
+        private Articulo articulo = null;
+        private Imagen imagen = null;
         public frmAgregar()
         {
             InitializeComponent();
+        }
+        public frmAgregar(Articulo articulo, Imagen imagen)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            this.imagen = imagen;
+            Text = "Modificar Articulo";
+            lblTitulo.Text = "Modificar Articulo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -26,38 +36,50 @@ namespace TPWinForm_equipo_18A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo artNuevo = new Articulo();
+            
             ArticuloNegocio negocio = new ArticuloNegocio();
             ImagenNegocio imgNegocio = new ImagenNegocio();
-            Imagen imgNueva = new Imagen();
+            
 
             try
             {
-                artNuevo.Codigo = tbCodigo.Text;
-                artNuevo.Nombre = tbNombre.Text;
-                artNuevo.Precio = decimal.Parse(tbPrecio.Text);
-                artNuevo.Descripcion = tbDescripcion.Text;
+                if(articulo == null)
+                {
+                    articulo = new Articulo();
+                    imagen = new Imagen();
+                }
 
-                artNuevo.Marca = (Marca)cmbMarca.SelectedItem;
-                artNuevo.Categoria = (Categoria)cmbCategoria.SelectedItem;
+                articulo.Codigo = tbCodigo.Text;
+                articulo.Nombre = tbNombre.Text;
+                articulo.Precio = decimal.Parse(tbPrecio.Text);
+                articulo.Descripcion = tbDescripcion.Text;
 
+                articulo.Marca = (Marca)cmbMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
 
-
-                // escritura del articulo en la db
-
-                negocio.agregar(artNuevo);
-
-                // buscar el id del articulo en la base 
-                artNuevo = negocio.buscarArticulo(artNuevo);
-
-                // Agregar imagen a la DB
-                imgNueva.IdArticulo = artNuevo.IdArticulo;
-                imgNueva.UrlImagen = tbImagen.Text;
-
-                imgNegocio.agregar(imgNueva);
+                imagen.UrlImagen = tbImagen.Text;
 
 
-                MessageBox.Show("Articulo agregado exitosamente");
+                if(articulo.IdArticulo != 0)
+                {
+                    negocio.modificar(articulo);
+                    imgNegocio.modificar(imagen);
+                    MessageBox.Show("Articulo modificado exitosamente");
+                }
+                else
+                {
+                    negocio.agregar(articulo);
+                    articulo = negocio.buscarArticulo(articulo);
+                    imagen.IdArticulo = articulo.IdArticulo;
+                    imgNegocio.agregar(imagen);
+                    MessageBox.Show("Articulo agregado exitosamente");
+
+                }
+
+
+
+
+
                 Close();
             }
             catch (Exception ex)
@@ -75,7 +97,25 @@ namespace TPWinForm_equipo_18A
             try
             {
                 cmbMarca.DataSource = marcaNegocio.listar();
+                cmbMarca.ValueMember = "IdMarca";
+                cmbMarca.DisplayMember = "NombreMarca";
                 cmbCategoria.DataSource = categoriaNegocio.listar();
+                cmbCategoria.ValueMember = "id";
+                cmbCategoria.DisplayMember = "descripcion";
+                Articulo aux = articulo;
+
+                if (articulo != null)
+                {
+                    tbCodigo.Text = articulo.Codigo;
+                    tbNombre.Text = articulo.Nombre;
+                    tbPrecio.Text = articulo.Precio.ToString();
+                    tbDescripcion.Text = articulo.Descripcion;
+                    tbImagen.Text = imagen.UrlImagen;
+                    cargarImagen(tbImagen.Text);
+                    cmbMarca.SelectedValue = articulo.Marca.IdMarca;
+                    cmbCategoria.SelectedValue = articulo.Categoria.id;
+
+                }
 
             }
             catch (Exception ex)

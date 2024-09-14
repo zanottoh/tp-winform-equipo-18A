@@ -138,6 +138,7 @@
             this.dgbPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbPrincipal.Location = new System.Drawing.Point(62, 152);
             this.dgbPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.dgbPrincipal.MultiSelect = false;
             this.dgbPrincipal.Name = "dgbPrincipal";
             this.dgbPrincipal.ReadOnly = true;
             this.dgbPrincipal.RowHeadersWidth = 51;
@@ -167,6 +168,7 @@
             this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 

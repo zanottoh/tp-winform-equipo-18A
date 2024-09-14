@@ -38,7 +38,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.tbPrecio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbDescripcion = new System.Windows.Forms.RichTextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.tbImagen = new System.Windows.Forms.TextBox();
             this.lblImagen = new System.Windows.Forms.Label();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            this.tbDescripcion = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,15 +145,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Descripción: ";
             // 
-            // tbDescripcion
-            // 
-            this.tbDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbDescripcion.Location = new System.Drawing.Point(35, 266);
-            this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(341, 78);
-            this.tbDescripcion.TabIndex = 6;
-            this.tbDescripcion.Text = "";
-            // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -161,7 +152,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 7;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Aceptar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -221,6 +212,15 @@
             this.pbxArticulo.TabIndex = 16;
             this.pbxArticulo.TabStop = false;
             // 
+            // tbDescripcion
+            // 
+            this.tbDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbDescripcion.Location = new System.Drawing.Point(35, 266);
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(341, 78);
+            this.tbDescripcion.TabIndex = 6;
+            this.tbDescripcion.Text = "";
+            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,7 +268,6 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox tbPrecio;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox tbDescripcion;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblCodigo;
@@ -276,5 +275,6 @@
         private System.Windows.Forms.TextBox tbImagen;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.PictureBox pbxArticulo;
+        private System.Windows.Forms.RichTextBox tbDescripcion;
     }
 }
