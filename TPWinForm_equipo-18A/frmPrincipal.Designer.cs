@@ -50,6 +50,8 @@
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.btnBusquedaAvanzada = new System.Windows.Forms.Button();
             this.pbxImagenSeleccion = new System.Windows.Forms.PictureBox();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.btnLimpiarFiltro = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenSeleccion)).BeginInit();
@@ -234,6 +236,7 @@
             this.btnBusquedaAvanzada.TabIndex = 14;
             this.btnBusquedaAvanzada.Text = "Busqueda avanzada";
             this.btnBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.btnBusquedaAvanzada.Click += new System.EventHandler(this.btnBusquedaAvanzada_Click);
             // 
             // pbxImagenSeleccion
             // 
@@ -244,11 +247,33 @@
             this.pbxImagenSeleccion.TabIndex = 15;
             this.pbxImagenSeleccion.TabStop = false;
             // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(309, 91);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 16;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // btnLimpiarFiltro
+            // 
+            this.btnLimpiarFiltro.Location = new System.Drawing.Point(309, 121);
+            this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
+            this.btnLimpiarFiltro.Size = new System.Drawing.Size(103, 23);
+            this.btnLimpiarFiltro.TabIndex = 17;
+            this.btnLimpiarFiltro.Text = "Limpiar Filtros";
+            this.btnLimpiarFiltro.UseVisualStyleBackColor = true;
+            this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 479);
+            this.Controls.Add(this.btnLimpiarFiltro);
+            this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.pbxImagenSeleccion);
             this.Controls.Add(this.btnBusquedaAvanzada);
             this.Controls.Add(this.cbMarca);
@@ -296,6 +321,8 @@
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.Button btnBusquedaAvanzada;
         private System.Windows.Forms.PictureBox pbxImagenSeleccion;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.Button btnLimpiarFiltro;
     }
 }
 

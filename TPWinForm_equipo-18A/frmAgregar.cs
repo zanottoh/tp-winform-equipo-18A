@@ -70,7 +70,7 @@ namespace TPWinForm_equipo_18A
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-
+          
 
             try
             {

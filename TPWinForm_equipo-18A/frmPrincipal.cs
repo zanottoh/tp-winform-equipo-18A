@@ -53,6 +53,14 @@ namespace TPWinForm_equipo_18A
 
             dgbPrincipal.DataSource = negocio.listar();
 
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+            cbCategoria.DataSource = categoriaNegocio.listar();
+            cbMarca.DataSource = marcaNegocio.listar();
+            cbCategoria.SelectedIndex = -1;
+            cbMarca.SelectedIndex = -1; 
+
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +115,60 @@ namespace TPWinForm_equipo_18A
         {
             frmAgregar ventanaAgregar = new frmAgregar();
             ventanaAgregar.ShowDialog();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+           ArticuloNegocio negocio = new ArticuloNegocio();
+
+            List<Articulo> lista = new List<Articulo>();
+
+            lista = negocio.listar();
+            
+            List<Articulo> listaFiltrada;
+
+            string categoria = null;
+            string marca = null;
+
+            Categoria categoriaSeleccionada = (Categoria)cbCategoria.SelectedItem;
+            if (categoriaSeleccionada != null)
+            {
+                categoria = categoriaSeleccionada.descripcion;
+            }
+
+            Marca marcaSeleccionada = (Marca)cbMarca.SelectedItem;
+            if (marcaSeleccionada != null)
+            {
+                marca = marcaSeleccionada.NombreMarca;
+            }
+
+
+            listaFiltrada = lista.FindAll(Item => (categoria == null || Item.Categoria.descripcion == categoria && marca == null || Item.Marca.NombreMarca == marca ));
+            dgbPrincipal.DataSource = null;
+            dgbPrincipal.DataSource = listaFiltrada;
+
+
+        }
+
+        private void btnLimpiarFiltro_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            dgbPrincipal.DataSource = negocio.listar();
+
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+            cbCategoria.DataSource = categoriaNegocio.listar();
+            cbMarca.DataSource = marcaNegocio.listar();
+            cbCategoria.SelectedIndex = -1;
+            cbMarca.SelectedIndex = -1;
+        }
+
+        private void btnBusquedaAvanzada_Click(object sender, EventArgs e)
+        {
+            frmBuscar ventanaBuscar = new frmBuscar();
+            ventanaBuscar.ShowDialog();
         }
     }
 }
