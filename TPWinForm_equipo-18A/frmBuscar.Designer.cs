@@ -47,7 +47,7 @@
             // txtBoxNombreBusqueda
             // 
             this.txtBoxNombreBusqueda.Location = new System.Drawing.Point(274, 221);
-            this.txtBoxNombreBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxNombreBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxNombreBusqueda.Name = "txtBoxNombreBusqueda";
             this.txtBoxNombreBusqueda.Size = new System.Drawing.Size(170, 20);
             this.txtBoxNombreBusqueda.TabIndex = 0;
@@ -94,7 +94,7 @@
             // txtBoxIdBusqueda
             // 
             this.txtBoxIdBusqueda.Location = new System.Drawing.Point(274, 184);
-            this.txtBoxIdBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxIdBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxIdBusqueda.Name = "txtBoxIdBusqueda";
             this.txtBoxIdBusqueda.Size = new System.Drawing.Size(170, 20);
             this.txtBoxIdBusqueda.TabIndex = 19;
@@ -113,7 +113,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(274, 263);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 39);
             this.btnBuscar.TabIndex = 21;
@@ -155,6 +155,7 @@
             this.pbBusquedaAvanzada.Location = new System.Drawing.Point(766, 191);
             this.pbBusquedaAvanzada.Name = "pbBusquedaAvanzada";
             this.pbBusquedaAvanzada.Size = new System.Drawing.Size(304, 276);
+            this.pbBusquedaAvanzada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBusquedaAvanzada.TabIndex = 25;
             this.pbBusquedaAvanzada.TabStop = false;
             // 
@@ -175,7 +176,7 @@
             this.Controls.Add(this.lblBusqueda);
             this.Controls.Add(this.cbCategoriaBusqueda);
             this.Controls.Add(this.txtBoxNombreBusqueda);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmBuscar";
             this.Text = "Busqueda";
             this.Load += new System.EventHandler(this.frmBuscar_Load);

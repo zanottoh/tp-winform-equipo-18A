@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace TPWinForm_equipo_18A
         public frmPrincipal()
         {
             InitializeComponent();
+            
         }
 
         private void botonBusqueda_Click(object sender, EventArgs e)
@@ -50,6 +52,7 @@ namespace TPWinForm_equipo_18A
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             cargar();
+           
 
         }
         private void cargar()
@@ -57,6 +60,7 @@ namespace TPWinForm_equipo_18A
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             dgbPrincipal.DataSource = negocio.listar();
+            dgbPrincipal.Columns["IdArticulo"].Visible = false;
 
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
@@ -65,6 +69,7 @@ namespace TPWinForm_equipo_18A
             cbMarca.DataSource = marcaNegocio.listar();
             cbCategoria.SelectedIndex = -1;
             cbMarca.SelectedIndex = -1;
+
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,9 +94,9 @@ namespace TPWinForm_equipo_18A
             {
                 pbxImagenSeleccion.Load(imagen.UrlImagen);
             }
-            catch (Exception ex)
+          
+            catch (Exception)
             {
-
                 pbxImagenSeleccion.Load("https://static.vecteezy.com/system/resources/previews/016/916/479/non_2x/placeholder-icon-design-free-vector.jpg");
             }
         }
@@ -167,6 +172,19 @@ namespace TPWinForm_equipo_18A
             Imagen imgSeleccion = imgNegocio.ObtenerImagen(seleccionado.IdArticulo);
             frmAgregar ventanaModificar = new frmAgregar(seleccionado, imgSeleccion);
             ventanaModificar.ShowDialog();
+            cargar();
+        }
+
+        private void agregarCategoriaToolstrip_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategoria frmAgregarCategoria = new frmAgregarCategoria();
+            frmAgregarCategoria.ShowDialog();
+
+
+        }
+
+        private void frmPrincipal_Activated(object sender, EventArgs e)
+        {
             cargar();
         }
     }

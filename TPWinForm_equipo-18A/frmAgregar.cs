@@ -36,7 +36,20 @@ namespace TPWinForm_equipo_18A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
+
+
+            if (cmbMarca.SelectedItem == null || cmbCategoria.SelectedItem == null || string.IsNullOrWhiteSpace(tbCodigo.Text) || string.IsNullOrWhiteSpace(tbNombre.Text) || string.IsNullOrWhiteSpace(tbDescripcion.Text))
+            {
+
+                MessageBox.Show("Complete todos los campos por favor, son obligatorios para agregar un Artículo.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
+
+
+
             ArticuloNegocio negocio = new ArticuloNegocio();
             ImagenNegocio imgNegocio = new ImagenNegocio();
             
