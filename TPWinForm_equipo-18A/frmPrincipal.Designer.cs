@@ -47,9 +47,9 @@
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.btnBusquedaAvanzada = new System.Windows.Forms.Button();
-            this.pbxImagenSeleccion = new System.Windows.Forms.PictureBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnLimpiarFiltro = new System.Windows.Forms.Button();
+            this.pbxImagenSeleccion = new System.Windows.Forms.PictureBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenSeleccion)).BeginInit();
@@ -82,14 +82,14 @@
             // agregarCategoriaToolstrip
             // 
             this.agregarCategoriaToolstrip.Name = "agregarCategoriaToolstrip";
-            this.agregarCategoriaToolstrip.Size = new System.Drawing.Size(180, 22);
+            this.agregarCategoriaToolstrip.Size = new System.Drawing.Size(170, 22);
             this.agregarCategoriaToolstrip.Text = "Agregar Categoría";
             this.agregarCategoriaToolstrip.Click += new System.EventHandler(this.agregarCategoriaToolstrip_Click);
             // 
             // agregarMarcaToolstrip
             // 
             this.agregarMarcaToolstrip.Name = "agregarMarcaToolstrip";
-            this.agregarMarcaToolstrip.Size = new System.Drawing.Size(180, 22);
+            this.agregarMarcaToolstrip.Size = new System.Drawing.Size(170, 22);
             this.agregarMarcaToolstrip.Text = "Agregar Marca";
             this.agregarMarcaToolstrip.Click += new System.EventHandler(this.agregarMarcaToolstrip_Click);
             // 
@@ -110,8 +110,9 @@
             // aboutUsToolStripMenuItem
             // 
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutUsToolStripMenuItem.Text = "About us";
+            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -227,15 +228,6 @@
             this.btnBusquedaAvanzada.UseVisualStyleBackColor = true;
             this.btnBusquedaAvanzada.Click += new System.EventHandler(this.btnBusquedaAvanzada_Click);
             // 
-            // pbxImagenSeleccion
-            // 
-            this.pbxImagenSeleccion.Location = new System.Drawing.Point(794, 35);
-            this.pbxImagenSeleccion.Name = "pbxImagenSeleccion";
-            this.pbxImagenSeleccion.Size = new System.Drawing.Size(325, 316);
-            this.pbxImagenSeleccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxImagenSeleccion.TabIndex = 15;
-            this.pbxImagenSeleccion.TabStop = false;
-            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Location = new System.Drawing.Point(309, 91);
@@ -255,6 +247,15 @@
             this.btnLimpiarFiltro.Text = "Limpiar Filtros";
             this.btnLimpiarFiltro.UseVisualStyleBackColor = true;
             this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
+            // 
+            // pbxImagenSeleccion
+            // 
+            this.pbxImagenSeleccion.Location = new System.Drawing.Point(794, 35);
+            this.pbxImagenSeleccion.Name = "pbxImagenSeleccion";
+            this.pbxImagenSeleccion.Size = new System.Drawing.Size(325, 316);
+            this.pbxImagenSeleccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImagenSeleccion.TabIndex = 15;
+            this.pbxImagenSeleccion.TabStop = false;
             // 
             // frmPrincipal
             // 

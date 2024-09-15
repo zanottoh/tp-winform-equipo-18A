@@ -204,5 +204,11 @@ namespace TPWinForm_equipo_18A
             frmAgregarMarca frmAgregarMarca = new frmAgregarMarca();
             frmAgregarMarca.ShowDialog();
         }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAboutUs frmAboutUs = new frmAboutUs();
+            frmAboutUs.ShowDialog();
+        }
     }
 }
