@@ -198,5 +198,11 @@ namespace TPWinForm_equipo_18A
             cargar();
 
         }
+
+        private void agregarMarcaToolstrip_Click(object sender, EventArgs e)
+        {
+            frmAgregarMarca frmAgregarMarca = new frmAgregarMarca();
+            frmAgregarMarca.ShowDialog();
+        }
     }
 }

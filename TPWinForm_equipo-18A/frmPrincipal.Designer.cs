@@ -82,15 +82,16 @@
             // agregarCategoriaToolstrip
             // 
             this.agregarCategoriaToolstrip.Name = "agregarCategoriaToolstrip";
-            this.agregarCategoriaToolstrip.Size = new System.Drawing.Size(170, 22);
+            this.agregarCategoriaToolstrip.Size = new System.Drawing.Size(180, 22);
             this.agregarCategoriaToolstrip.Text = "Agregar Categoría";
             this.agregarCategoriaToolstrip.Click += new System.EventHandler(this.agregarCategoriaToolstrip_Click);
             // 
             // agregarMarcaToolstrip
             // 
             this.agregarMarcaToolstrip.Name = "agregarMarcaToolstrip";
-            this.agregarMarcaToolstrip.Size = new System.Drawing.Size(170, 22);
+            this.agregarMarcaToolstrip.Size = new System.Drawing.Size(180, 22);
             this.agregarMarcaToolstrip.Text = "Agregar Marca";
+            this.agregarMarcaToolstrip.Click += new System.EventHandler(this.agregarMarcaToolstrip_Click);
             // 
             // opcionesToolStripMenuItem
             // 

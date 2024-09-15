@@ -55,17 +55,8 @@ namespace TPWinForm_equipo_18A
             }
             catch (FormatException)
             {
-
                 
-
-                
-            }   
-               
-           
-         
-
-
-
+            }
         }
 
         private void btnCancelarCat_Click(object sender, EventArgs e)
