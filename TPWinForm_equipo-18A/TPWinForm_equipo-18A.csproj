@@ -58,6 +58,12 @@
     <Compile Include="frmBuscar.Designer.cs">
       <DependentUpon>frmBuscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarArticulo.Designer.cs">
+      <DependentUpon>frmEliminarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscar.resx">
       <DependentUpon>frmBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarArticulo.resx">
+      <DependentUpon>frmEliminarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmList.resx">
       <DependentUpon>frmList.cs</DependentUpon>

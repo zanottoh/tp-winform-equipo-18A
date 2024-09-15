@@ -11,6 +11,12 @@ namespace dominio
         public int Id { get; set; }
         public int IdArticulo { get; set; }
         public string UrlImagen { get; set; }
+        
+        public override string ToString()
+       {
+        return UrlImagen.ToString();
+       }
 
     }
+
 }

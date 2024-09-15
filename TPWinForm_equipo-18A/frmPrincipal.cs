@@ -187,5 +187,16 @@ namespace TPWinForm_equipo_18A
         {
             cargar();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+            Articulo seleccionado = (Articulo)dgbPrincipal.CurrentRow.DataBoundItem;
+            Imagen imgSeleccion = imgNegocio.ObtenerImagen(seleccionado.IdArticulo);
+            frmEliminarArticulo ventanaEliminar = new frmEliminarArticulo(seleccionado, imgSeleccion);
+            ventanaEliminar.ShowDialog();
+            cargar();
+
+        }
     }
 }
