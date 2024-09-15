@@ -72,6 +72,7 @@ namespace TPWinForm_equipo_18A
             {
 
                 MessageBox.Show("Complete todos los campos por favor, son obligatorios para la búsqueda.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 return;
             }
 

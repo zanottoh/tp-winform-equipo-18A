@@ -83,9 +83,20 @@ namespace TPWinForm_equipo_18A
         {
             ImagenNegocio imgNegocio = new ImagenNegocio();
 
-            Articulo seleccionado = (Articulo)dgbPrincipal.CurrentRow.DataBoundItem;
-            Imagen imagenObtenida = imgNegocio.ObtenerImagen(seleccionado.IdArticulo);
-            cargarImagen(imagenObtenida);
+
+            try
+            {
+                Articulo seleccionado = (Articulo)dgbPrincipal.CurrentRow.DataBoundItem;
+                Imagen imagenObtenida = imgNegocio.ObtenerImagen(seleccionado.IdArticulo);
+                cargarImagen(imagenObtenida);
+
+            }
+            catch (NullReferenceException)
+            {
+
+                return;
+            }
+            
         }
 
         private void cargarImagen(Imagen imagen)

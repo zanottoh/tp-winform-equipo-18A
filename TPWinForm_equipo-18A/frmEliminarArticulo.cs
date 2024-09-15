@@ -32,7 +32,12 @@ namespace TPWinForm_equipo_18A
             lbCategoria.Text = categoria.ToString();
             lbPrecio.Text = articulo.Precio.ToString();
             rtbDescripcion.Text = articulo.Descripcion;
-            cargarImagen(imagen.ToString());
+            
+            if (!(imagen == null))
+            {
+                cargarImagen(imagen.ToString());
+            }
+
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
