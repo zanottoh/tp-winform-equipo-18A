@@ -72,10 +72,7 @@ namespace TPWinForm_equipo_18A
 
         }
 
-        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
 
 

@@ -66,7 +66,7 @@
             this.lblBusqueda.Location = new System.Drawing.Point(126, 103);
             this.lblBusqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(113, 13);
+            this.lblBusqueda.Size = new System.Drawing.Size(127, 15);
             this.lblBusqueda.TabIndex = 16;
             this.lblBusqueda.Text = "Selecciona Categoría:";
             this.lblBusqueda.Click += new System.EventHandler(this.lblBusqueda_Click);
@@ -77,7 +77,7 @@
             this.label1.Location = new System.Drawing.Point(143, 149);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(109, 15);
             this.label1.TabIndex = 17;
             this.label1.Text = "Selecciona Marca:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -106,9 +106,9 @@
             this.label2.Location = new System.Drawing.Point(299, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(292, 36);
+            this.label2.Size = new System.Drawing.Size(368, 45);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Busqueda Avanzada";
+            this.label2.Text = "Búsqueda Avanzada";
             // 
             // btnBuscar
             // 
@@ -126,16 +126,16 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(180, 191);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(92, 15);
             this.label3.TabIndex = 22;
-            this.label3.Text = "ID Articulo:";
+            this.label3.Text = "Código Artículo:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(192, 228);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(55, 15);
             this.label4.TabIndex = 23;
             this.label4.Text = "Nombre:";
             // 
@@ -146,6 +146,7 @@
             this.dgvBusquedaAvanzada.Location = new System.Drawing.Point(21, 354);
             this.dgvBusquedaAvanzada.MultiSelect = false;
             this.dgvBusquedaAvanzada.Name = "dgvBusquedaAvanzada";
+            this.dgvBusquedaAvanzada.RowHeadersWidth = 51;
             this.dgvBusquedaAvanzada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBusquedaAvanzada.Size = new System.Drawing.Size(739, 113);
             this.dgvBusquedaAvanzada.TabIndex = 24;
